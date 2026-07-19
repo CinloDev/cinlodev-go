@@ -1,42 +1,73 @@
-import { Code, Settings, PieChart, Wrench, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/common/icons";
+import { Code, Settings, PieChart, Wrench, Mail, Terminal } from "lucide-react";
+import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/common/icons";
 
 export type LinkItem = {
   id: string;
   title: string;
+  subtitle?: string;
   description: string;
+  features?: string[];
+  status?: string;
+  actionText?: string;
   url: string;
+  featured?: boolean;
+  peekingNeko?: boolean;
   icon: React.ElementType;
 };
 
 export const linksConfig: LinkItem[] = [
   {
-    id: "portfolio",
-    title: "Portfolio",
-    description: "See my projects and experience.",
-    url: "https://cinlodev.com",
-    icon: Code,
-  },
-  {
     id: "cinlolabs",
     title: "CinloLabs",
-    description: "Dental Laboratory SaaS.",
-    url: "https://cinlolabs.com",
+    subtitle: "Software SaaS para empresas",
+    description: "Plataforma integral para laboratorios odontológicos y mecánicos. Controla tus órdenes, costos y facturación desde un solo lugar.",
+    features: ["Gestión de órdenes", "Motor de costos", "Inventario y Facturación"],
+    status: "Lanzado",
+    actionText: "Explorar CinloLabs",
+    url: "https://labs.cinlodev.com",
+    featured: true,
     icon: Settings,
   },
   {
     id: "aldia",
     title: "AlDía",
-    description: "Shared Expenses Manager.",
-    url: "https://aldia.app",
+    subtitle: "Gestión de finanzas personales",
+    description: "Dashboard financiero, gastos compartidos, metas de ahorro y control de tarjetas para personas, parejas, familias y grupos.",
+    features: ["Gastos compartidos en grupos", "Metas de ahorro con progreso", "Dashboard y proyección mensual"],
+    status: "Lanzado",
+    actionText: "Explorar AlDía",
+    url: "https://aldia.cinlodev.com",
+    featured: true,
     icon: PieChart,
   },
   {
     id: "nekotools",
     title: "NekoTools",
-    description: "Free tools for developers and designers.",
-    url: "https://nekotools.com",
+    subtitle: "Optimización para desarrollo web",
+    description: "Herramientas para desarrolladores que optimizan imágenes, generan componentes React y automatizan tareas frontend, todo con procesamiento local.",
+    features: ["Image Resizer", "WebP Converter", "Color Extractor", "SVG to React"],
+    status: "En desarrollo continuo",
+    actionText: "Probar NekoTools",
+    url: "https://nekotools.cinlodev.com",
+    featured: true,
+    peekingNeko: true,
     icon: Wrench,
+  },
+  {
+    id: "vault",
+    title: "Vault",
+    subtitle: "Workspace para desarrolladores",
+    description: "Centralizá tu conocimiento técnico: comandos, snippets, prompts y herramientas inteligentes con IA.",
+    features: [
+      "Bóvedas privadas: Organizá comandos por proyecto.",
+      "Herramientas con IA: Generá ramas y PRs.",
+      "Kit de desarrollo: Git, Docker, Node.js siempre listos."
+    ],
+    status: "Estable / Lanzado",
+    actionText: "Probar Vault",
+    url: "https://vault.cinlodev.com",
+    featured: true,
+    icon: Terminal,
   },
   {
     id: "github",
@@ -53,10 +84,17 @@ export const linksConfig: LinkItem[] = [
     icon: LinkedinIcon,
   },
   {
+    id: "instagram",
+    title: "Instagram",
+    description: "Daily life, code & Neko.",
+    url: "https://instagram.com/cinlodev",
+    icon: InstagramIcon,
+  },
+  {
     id: "contact",
     title: "Contact",
     description: "Let's build something together.",
-    url: "mailto:hello@cinlodev.com",
+    url: "mailto:cinlodev@gmail.com",
     icon: Mail,
   },
 ];

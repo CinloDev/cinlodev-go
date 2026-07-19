@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Briefcase } from "lucide-react";
+import { WhatsappIcon } from "@/components/common/icons";
 import { profileConfig } from "@/config/profile";
 
 export function Hero() {
@@ -13,25 +15,26 @@ export function Hero() {
       className="flex flex-col items-center text-center mt-12 mb-10 w-full relative z-10"
     >
       <div className="relative mb-6 group cursor-default">
-        {/* Glow halo detrás del avatar */}
+        {/* Glow halo detrás del avatar - Más fuerte e inmersivo */}
         <div 
-          className="absolute inset-0 rounded-full scale-125 opacity-70 blur-2xl"
-          style={{ background: "radial-gradient(circle at top, #44307A, #221B38 40%, transparent 100%)" }}
+          className="absolute inset-[-100px] rounded-full scale-150 opacity-90 blur-3xl pointer-events-none"
+          style={{ background: "radial-gradient(circle at center, rgba(68, 48, 122, 0.4), rgba(34, 27, 56, 0.2) 50%, transparent 100%)" }}
         />
         
-        <div className="relative h-28 w-28 overflow-hidden rounded-full border border-white/10 bg-white/5 p-1 shadow-2xl transition-transform duration-300 group-hover:scale-[1.02]">
+        <div className="relative h-32 w-32 overflow-hidden rounded-full border-2 border-white/10 bg-white/5 p-1 shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-transform duration-300 group-hover:scale-[1.02] z-10">
           <div className="relative h-full w-full overflow-hidden rounded-full">
             <Image
               src={profileConfig.avatarUrl}
               alt={profileConfig.name}
               fill
+              sizes="128px"
               className="object-cover"
               priority
             />
           </div>
         </div>
         {profileConfig.status.available && (
-          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#171424]/90 px-3 py-1 text-xs font-medium backdrop-blur-md flex items-center gap-1.5 shadow-lg">
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#171424]/90 px-3 py-1 text-xs font-medium backdrop-blur-md flex items-center gap-1.5 shadow-lg z-20">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#63E6A5] opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#63E6A5]"></span>
@@ -50,15 +53,21 @@ export function Hero() {
 
       <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4">
         <a 
-          href={profileConfig.socials?.find(s => s.name === "GitHub")?.url || "#"} 
-          className="btn-primary flex w-full sm:w-auto items-center justify-center px-8 py-3 text-sm font-semibold"
+          href="https://portfolio.cinlodev.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-3 text-sm font-semibold"
         >
+          <Briefcase className="w-5 h-5" />
           Ver Portfolio
         </a>
         <a 
-          href={`mailto:${profileConfig.contact.email}`}
-          className="btn-secondary flex w-full sm:w-auto items-center justify-center px-8 py-3 text-sm font-semibold"
+          href="https://wa.me/5492212024901"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-3 text-sm font-semibold"
         >
+          <WhatsappIcon className="w-5 h-5" />
           Contactar
         </a>
       </div>
