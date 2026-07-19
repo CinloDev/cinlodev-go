@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Tipografía */
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta base (Minimalista y Premium) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+
+  /* Acentos */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+}
+
+:root {
+  /* Por defecto forzamos el look Dark Mode First como pidió el usuario */
+  --background: #171424;
+  --foreground: #ffffff;
+  --card: #2C2348;
+  --card-foreground: #ffffff;
+  --border: #4A3A73;
+  
+  --primary: #8B5CF6; 
+  --primary-hover: #A855F7;
+  --primary-foreground: #ffffff;
+  
+  --accent: #FFB26B; 
+  --accent-foreground: #171424;
+
+  --link: #C89BFF;
+  --link-hover: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    /* Gradiente suave de fondo */
+    background: linear-gradient(180deg, #171424 0%, #221B38 45%, #2A2150 100%);
+    background-attachment: fixed;
+    @apply text-foreground antialiased selection:bg-primary/30 min-h-screen;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Utilidades personalizadas para la web (Glassmorphism & Shadows) */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  }
+  .glass-card-hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), 0 0 20px rgba(139, 92, 246, 0.35), 0 0 60px rgba(139, 92, 246, 0.15);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground transition-all duration-300;
+    border-radius: 18px;
+  }
+  .btn-primary:hover {
+    @apply bg-[var(--primary-hover)] scale-[1.02];
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #4A3A73;
+    @apply text-foreground transition-all duration-300;
+    border-radius: 18px;
+  }
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.10);
+    @apply scale-[1.02];
+  }
+}
