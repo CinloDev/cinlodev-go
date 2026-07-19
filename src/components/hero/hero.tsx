@@ -12,7 +12,7 @@ export function Hero() {
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-			className="flex flex-col items-center text-center mt-12 mb-10 w-full relative z-10"
+			className="flex flex-col items-center text-center mt-12 mb-10 w-full px-4 relative z-10"
 		>
 			<div className="relative mb-6 group cursor-default">
 				{/* Glow halo detrás del avatar - Más fuerte e inmersivo */}
@@ -74,6 +74,10 @@ export function Hero() {
 					Trabajemos juntos
 				</a>
 			</div>
+
+			<p className="mt-8 text-sm font-medium text-[#9A93B8] flex items-center justify-center gap-1.5 opacity-80">
+				<span>🚀</span> Disponible para proyectos remotos.
+			</p>
 		</motion.section>
 	);
 }
