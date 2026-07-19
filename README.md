@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+<img src="./public/assets/logo_cinlodev.svg" alt="Logo" width="140">
 
-First, run the development server:
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# CinloDev Link Hub
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Bienvenidos al universo digital de **CinloDev**. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Más que un simple "Linktree", este proyecto es un **SaaS-like Bento Dashboard** diseñado para centralizar mi portfolio, herramientas, productos SaaS y redes bajo una estética extremadamente cuidada, premium y minimalista.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Filosofía de Diseño
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+La interfaz fue construida buscando transmitir una sensación de *"Cozy Developer Setup"*:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Glassmorphism Elegante**: Tarjetas de cristal translúcidas flotando sobre un setup nocturno con sutiles halos de luz violeta.
+- **Dark Mode Nativo**: Pensado y diseñado para entornos oscuros, usando tonos morados profundos y luces neón suaves.
+- **Minimalismo Premium**: Mucho aire visual, tipografías modernas (Sora) y una jerarquía clara donde el contenido y los proyectos son los verdaderos protagonistas.
+- **El factor Neko**: El sutil acompañamiento de Neko a través de micro-interacciones ocultas (hover effects) para darle vida y personalidad a la interfaz sin saturarla.
 
-## Deploy on Vercel
+## 🚀 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este hub está construido con herramientas modernas, enfocadas en performance y experiencia de desarrollo:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework**: Next.js (App Router)
+- **Librería UI**: React 19
+- **Estilos**: Tailwind CSS v4
+- **Animaciones**: Framer Motion
+- **Iconografía**: Lucide React & SVGs personalizados
+- **Linter / Formatter**: Biome
+- **Package Manager**: pnpm
+
+## 🍱 Arquitectura Bento Grid
+
+El layout fue diseñado de cero para abandonar la aburrida lista vertical de links y escalar perfectamente en cualquier dispositivo:
+- **Desktop**: Un elegante y espacioso Bento Grid 2x2 para los proyectos destacados, ofreciendo una experiencia similar a entrar a un dashboard de un producto SaaS real.
+- **Mobile**: Apilamiento vertical con tarjetas amplias, optimizado para una lectura rápida y navegación ágil con el pulgar.
+
+## 🎨 Easter Eggs & Micro-Interacciones
+
+- **Físicas y animaciones**: Cada tarjeta cuenta con físicas elásticas (escala dinámica) al pasar el cursor o hacer "tap" en móviles.
+- **Neko escondido**: En lugar de ensuciar el diseño con mascotas flotantes, Neko vive escondido detrás de los componentes de su propia herramienta (*NekoTools*), asomándose con un salto elástico únicamente cuando interactúas con ella.
+- **Iluminación Dinámica**: Uso estratégico de sombras, `backdrop-blur` y desenfoque radial (`blur-3xl`) para crear ilusiones de profundidad real.
+
+---
+
+> *"Hecho con café, código y magia."* — **CinloDev**
