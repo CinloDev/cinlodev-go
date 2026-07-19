@@ -21,6 +21,11 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-link: var(--link);
   --color-link-hover: var(--link-hover);
+  --color-primary-light: var(--primary-light);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-foreground-hover: var(--muted-foreground-hover);
+  --color-success: var(--success);
 }
 
 :root {
@@ -34,12 +39,19 @@
 	--primary: #8b5cf6;
 	--primary-hover: #a855f7;
 	--primary-foreground: #ffffff;
+	--primary-light: #d38bff;
 
 	--accent: #ffb26b;
 	--accent-foreground: #171424;
 
 	--link: #c89bff;
 	--link-hover: #ffffff;
+
+	--muted: #4a3a73;
+	--muted-foreground: #9a93b8;
+	--muted-foreground-hover: #c8c3e6;
+
+	--success: #63e6a5;
 }
 
 @layer base {

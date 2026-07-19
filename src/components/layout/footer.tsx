@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Moon } from "lucide-react";
+
 import Image from "next/image";
 
 export function Footer() {
@@ -25,12 +25,12 @@ export function Footer() {
 					</div>
 				</div>
 
-				<p className="text-[13px] font-normal text-[#9A93B8] m-0 transition-colors group-hover:text-[#C89BFF]">
-					© {new Date().getFullYear()} CinloDev. Casi todos los códigos
+				<p className="text-[13px] font-normal text-muted-foreground m-0 transition-colors group-hover:text-link">
+					&copy; {new Date().getFullYear()} CinloDev. Casi todos los códigos
 					reservados.
 				</p>
 
-				<p className="text-[11px] font-normal text-[#4A3A73] m-0">
+				<p className="text-[11px] font-normal text-muted m-0">
 					Hecho con café, código y magia.
 				</p>
 			</div>

@@ -25,7 +25,7 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 				}}
 				whileHover={{ scale: 1.02 }}
 				whileTap={{ scale: 0.98 }}
-				className="group relative flex flex-col justify-between rounded-3xl p-6 sm:p-8 transition-all duration-300 glass-card hover:glass-card-hover col-span-1 min-h-[280px]"
+				className="group relative flex flex-col justify-between rounded-3xl px-3 py-6 sm:p-8 transition-all duration-300 glass-card hover:glass-card-hover col-span-1 min-h-[280px]"
 			>
 				{/* Neko asomándose escondido */}
 				{hasNeko && (
@@ -44,15 +44,15 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 					{/* Header de la tarjeta */}
 					<div className="flex flex-col sm:flex-row sm:items-start justify-between w-full mb-4 gap-4">
 						<div className="flex items-center gap-4">
-							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-[#C89BFF] transition-colors duration-300 group-hover:bg-[#8B5CF6] group-hover:text-white group-hover:border-transparent">
+							<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-link transition-colors duration-300 group-hover:bg-primary group-hover:text-white group-hover:border-transparent">
 								<Icon className="h-6 w-6" />
 							</div>
 							<div className="flex flex-col">
-								<h2 className="text-xl sm:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-[#D38BFF]">
+								<h2 className="text-xl sm:text-2xl font-bold text-white transition-colors duration-300 group-hover:text-primary-light">
 									{link.title}
 								</h2>
 								{link.subtitle && (
-									<span className="text-sm font-medium text-[#FFB26B]">
+									<span className="text-sm font-medium text-accent">
 										{link.subtitle}
 									</span>
 								)}
@@ -61,16 +61,16 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 					</div>
 
 					{/* Descripción Principal */}
-					<p className="text-[15px] sm:text-base leading-relaxed text-[#9A93B8] group-hover:text-[#C8C3E6] transition-colors duration-300 mb-6 max-w-xl">
+					<p className="text-[15px] sm:text-base leading-relaxed text-muted-foreground group-hover:text-muted-foreground-hover transition-colors duration-300 mb-6 max-w-xl">
 						{link.description}
 					</p>
 
 					{/* Call to action & Arrow */}
 					<div className="flex items-center justify-between mt-auto pt-5 border-t border-white/5">
-						<span className="text-sm sm:text-base font-semibold text-[#8B5CF6] transition-colors group-hover:text-[#A855F7] flex items-center gap-2">
+						<span className="text-sm sm:text-base font-semibold text-primary transition-colors group-hover:text-primary-hover flex items-center gap-2">
 							{link.actionText || "Explorar"}
 						</span>
-						<div className="text-[#4A3A73] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#FFB26B]">
+						<div className="text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent">
 							<ArrowUpRight className="h-6 w-6 sm:h-7 sm:w-7" />
 						</div>
 					</div>
@@ -97,19 +97,19 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 			className="group relative flex items-center justify-between rounded-2xl p-5 transition-all duration-300 glass-card hover:glass-card-hover col-span-1"
 		>
 			<div className="flex items-center gap-4 relative z-10">
-				<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-[#C89BFF] transition-colors duration-300 group-hover:bg-[#8B5CF6] group-hover:text-white group-hover:border-transparent">
+				<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/5 border border-white/10 text-link transition-colors duration-300 group-hover:bg-primary group-hover:text-white group-hover:border-transparent">
 					<Icon className="h-5 w-5" />
 				</div>
 				<div className="flex flex-col">
-					<h2 className="text-base font-semibold text-white transition-colors duration-300 group-hover:text-[#D38BFF]">
+					<h2 className="text-base font-semibold text-white transition-colors duration-300 group-hover:text-primary-light">
 						{link.title}
 					</h2>
-					<p className="text-sm text-[#9A93B8] line-clamp-1 group-hover:text-[#C8C3E6] transition-colors duration-300">
+					<p className="text-sm text-muted-foreground line-clamp-1 group-hover:text-muted-foreground-hover transition-colors duration-300">
 						{link.description}
 					</p>
 				</div>
 			</div>
-			<div className="shrink-0 pl-2 text-[#4A3A73] transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#FFB26B]">
+			<div className="shrink-0 pl-2 text-muted transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent">
 				<ArrowUpRight className="h-5 w-5" />
 			</div>
 		</motion.a>

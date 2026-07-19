@@ -37,10 +37,10 @@ export function Hero() {
 					</div>
 				</div>
 				{profileConfig.status.available && (
-					<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#171424]/90 px-3 py-1 text-xs font-medium backdrop-blur-md flex items-center gap-1.5 shadow-lg z-20">
+					<div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-white/10 bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur-md flex items-center gap-1.5 shadow-lg z-20">
 						<span className="relative flex h-2 w-2">
-							<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#63E6A5] opacity-75"></span>
-							<span className="relative inline-flex h-2 w-2 rounded-full bg-[#63E6A5]"></span>
+							<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success opacity-75"></span>
+							<span className="relative inline-flex h-2 w-2 rounded-full bg-success"></span>
 						</span>
 						{profileConfig.status.label}
 					</div>
@@ -50,7 +50,7 @@ export function Hero() {
 			<h1 className="mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 				{profileConfig.name}
 			</h1>
-			<p className="mb-6 max-w-sm text-base text-[#C8C3E6]">
+			<p className="mb-6 max-w-sm text-base text-muted-foreground-hover">
 				Frontend Developer especializada en React, Next.js y productos SaaS.
 			</p>
 
@@ -75,7 +75,7 @@ export function Hero() {
 				</a>
 			</div>
 
-			<p className="mt-8 text-sm font-medium text-[#9A93B8] flex items-center justify-center gap-1.5 opacity-80">
+			<p className="mt-8 text-sm font-medium text-muted-foreground flex items-center justify-center gap-1.5 opacity-80">
 				<span>🚀</span> Disponible para proyectos remotos.
 			</p>
 		</motion.section>
