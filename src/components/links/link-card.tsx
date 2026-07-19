@@ -30,12 +30,12 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 				{/* Neko asomándose escondido */}
 				{hasNeko && (
 					<div className="absolute -top-11 right-6 -z-10 transform translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-[0_0_15px_rgba(139,92,246,0.4)]">
-						<Image 
-						  src="/assets/neko.svg" 
-						  alt="Neko asomándose" 
-						  width={64} 
-						  height={64} 
-						  className="w-16 h-16 object-contain"
+						<Image
+							src="/assets/neko.svg"
+							alt="Neko asomándose"
+							width={64}
+							height={64}
+							className="w-16 h-16 object-contain"
 						/>
 					</div>
 				)}
