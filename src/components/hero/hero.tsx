@@ -51,7 +51,7 @@ export function Hero() {
 				{profileConfig.name}
 			</h1>
 			<p className="mb-6 max-w-sm text-base text-[#C8C3E6]">
-				☕ Café, código y magia.
+				Frontend Developer especializada en React, Next.js y productos SaaS.
 			</p>
 
 			<div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto px-4">
@@ -71,7 +71,7 @@ export function Hero() {
 					className="btn-secondary flex w-full sm:w-auto items-center justify-center gap-2.5 px-8 py-3 text-sm font-semibold"
 				>
 					<WhatsappIcon className="w-5 h-5" />
-					Contactar
+					Trabajemos juntos
 				</a>
 			</div>
 		</motion.section>

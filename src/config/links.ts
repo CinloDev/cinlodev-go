@@ -1,4 +1,4 @@
-import { Code, Mail, PieChart, Settings, Terminal, Wrench } from "lucide-react";
+import { Mail, PieChart, Settings, Terminal, Wrench } from "lucide-react";
 import {
 	GithubIcon,
 	InstagramIcon,
@@ -59,7 +59,7 @@ export const linksConfig: LinkItem[] = [
 		title: "NekoTools",
 		subtitle: "Optimización para desarrollo web",
 		description:
-			"Herramientas para desarrolladores que optimizan imágenes, generan componentes React y automatizan tareas frontend, todo con procesamiento local.",
+			"Herramientas para desarrolladores que optimizan imágenes, generan componentes React y automatizan tareas frontend.",
 		features: [
 			"Image Resizer",
 			"WebP Converter",
@@ -93,14 +93,14 @@ export const linksConfig: LinkItem[] = [
 	{
 		id: "github",
 		title: "GitHub",
-		description: "Proyectos Open Source.",
+		description: "Código, contribuciones y showcases.",
 		url: "https://github.com/cinlodev",
 		icon: GithubIcon,
 	},
 	{
 		id: "linkedin",
 		title: "LinkedIn",
-		description: "Experiencia Profesional.",
+		description: "Mi trayectoria y experiencia.",
 		url: "https://linkedin.com/in/cinlodev",
 		icon: LinkedinIcon,
 	},
@@ -115,7 +115,7 @@ export const linksConfig: LinkItem[] = [
 		id: "contact",
 		title: "Contacto",
 		description: "Construyamos algo juntos.",
-		url: "mailto:cinlodev@gmail.com",
+		url: "mailto:hello@cinlodev.com",
 		icon: Mail,
 	},
 ];
