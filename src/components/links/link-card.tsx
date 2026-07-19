@@ -27,9 +27,9 @@ export function LinkCard({ link, index }: { link: LinkItem; index: number }) {
 				whileTap={{ scale: 0.98 }}
 				className="group relative flex flex-col justify-between rounded-3xl p-6 sm:p-8 transition-all duration-300 glass-card hover:glass-card-hover col-span-1 min-h-[280px]"
 			>
-				{/* Neko asomándose */}
+				{/* Neko asomándose escondido */}
 				{hasNeko && (
-					<div className="absolute -top-12 right-6 transform transition-transform duration-300 group-hover:-translate-y-2 origin-bottom z-20 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+					<div className="absolute -top-11 right-6 -z-10 transform translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] group-hover:translate-y-0 group-hover:opacity-100 drop-shadow-[0_0_15px_rgba(139,92,246,0.4)]">
 						<Image 
 						  src="/assets/neko.svg" 
 						  alt="Neko asomándose" 
