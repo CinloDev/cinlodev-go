@@ -1,4 +1,4 @@
-import { Mail, PieChart, Settings, Terminal, Wrench } from "lucide-react";
+import { Globe, Mail, PieChart, Settings, Terminal, Wrench } from "lucide-react";
 import {
 	GithubIcon,
 	InstagramIcon,
@@ -20,6 +20,23 @@ export type LinkItem = {
 };
 
 export const linksConfig: LinkItem[] = [
+	{
+	id: "services",
+	title: "Servicios de Desarrollo",
+	subtitle: "Soluciones web para empresas",
+	description:
+		"Desarrollo aplicaciones web, SaaS y plataformas a medida con tecnologías modernas. Desde la idea hasta producción.",
+	features: [
+		"Aplicaciones Web",
+		"SaaS a medida",
+		"Consultoría técnica",
+	],
+	status: "Disponible",
+	actionText: "Solicitar un proyecto",
+	url: "https://www.cinlodev.com",
+	featured: true,
+	icon: Globe,
+	},
 	{
 		id: "cinlolabs",
 		title: "CinloLabs",
