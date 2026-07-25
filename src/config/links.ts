@@ -1,4 +1,4 @@
-import { Globe, Mail, PieChart, Settings, Terminal, Wrench } from "lucide-react";
+import { Globe, Mail, PieChart, Settings, Terminal, Wrench, Briefcase } from "lucide-react";
 import {
 	GithubIcon,
 	InstagramIcon,
@@ -21,21 +21,21 @@ export type LinkItem = {
 
 export const linksConfig: LinkItem[] = [
 	{
-	id: "services",
-	title: "Servicios de Desarrollo",
-	subtitle: "Soluciones web para empresas",
-	description:
-		"Desarrollo aplicaciones web, SaaS y plataformas a medida con tecnologías modernas. Desde la idea hasta producción.",
-	features: [
-		"Aplicaciones Web",
-		"SaaS a medida",
-		"Consultoría técnica",
-	],
-	status: "Disponible",
-	actionText: "Solicitar un proyecto",
-	url: "https://www.cinlodev.com",
-	featured: true,
-	icon: Globe,
+		id: "services",
+		title: "Servicios de Desarrollo",
+		subtitle: "Soluciones web para empresas",
+		description:
+			"Desarrollo aplicaciones web, SaaS y plataformas a medida con tecnologías modernas. Desde la idea hasta producción.",
+		features: [
+			"Aplicaciones Web",
+			"SaaS a medida",
+			"Consultoría técnica",
+		],
+		status: "Disponible",
+		actionText: "Solicitar un proyecto",
+		url: "https://www.cinlodev.com",
+		featured: true,
+		icon: Globe,
 	},
 	{
 		id: "cinlolabs",
@@ -89,6 +89,23 @@ export const linksConfig: LinkItem[] = [
 		featured: true,
 		peekingNeko: true,
 		icon: Wrench,
+	},
+	{
+		id: "nekojobs",
+		title: "NekoJobs",
+		subtitle: "Gestor de postulaciones de empleo",
+		description:
+			"Plataforma para llevar el control y seguimiento de todas tus búsquedas laborales y entrevistas en un solo lugar.",
+		features: [
+			"Seguimiento de postulaciones",
+			"Gestión de entrevistas",
+		],
+		status: "En desarrollo",
+		actionText: "Probar NekoJobs",
+		url: "https://nekojobs.cinlodev.com",
+		featured: true,
+		peekingNeko: true,
+		icon: Briefcase,
 	},
 	{
 		id: "vault",
