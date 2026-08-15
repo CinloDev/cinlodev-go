@@ -1,4 +1,4 @@
-import { Globe, Mail, PieChart, Settings, Terminal, Wrench, Briefcase } from "lucide-react";
+import { Globe, Mail, PieChart, Settings, Terminal, Wrench, Briefcase, Sprout } from "lucide-react";
 import {
 	GithubIcon,
 	InstagramIcon,
@@ -124,6 +124,23 @@ export const linksConfig: LinkItem[] = [
 		featured: true,
 		icon: Terminal,
 	},
+	{
+	id: "stardew-companion",
+	title: "Stardew Companion",
+	subtitle: "Companion web para Stardew Valley",
+	description:
+		"Guía interactiva para consultar aldeanos, calendario, Centro Cívico, pescados, museo, recetas y tiendas mientras jugás.",
+	features: [
+	"Calendario dinámico según la partida",
+	"Seguimiento del Centro Cívico y Museo",
+	"Guía de aldeanos, pescados, recetas y tiendas",
+],
+	status: "Estable / Lanzado",
+	actionText: "Explorar Stardew Guide",
+	url: "https://stardew.cinlodev.com",
+	featured: true,
+	icon: Sprout,
+},
 	{
 		id: "github",
 		title: "GitHub",
